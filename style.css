@@ -1,0 +1,127 @@
+/* Video background */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vw; /* Add this line */
+  height: 100vh; /* Add this line */
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Body and layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Welcome screen */
+#welcomeScreen {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  animation: fadeIn 1.5s ease-in;
+}
+
+#welcomeScreen h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#welcomeScreen button {
+  padding: 12px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#welcomeScreen button:hover {
+  background-color: darkorange;
+}
+
+/* Calculator styling */
+.calculator {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  animation: fadeIn 1.2s ease-in;
+  width: 520px;  /* <---- increased width here */
+}
+
+
+#display {
+  width: 490px;
+  padding: 15px;
+  font-size: 28px;
+  text-align: right;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: white;
+  color: black;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(7, 65px);
+  grid-gap: 12px;
+}
+
+button {
+  padding: 20px;
+  font-size: 22px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Number buttons: Orange */
+button.number {
+  background-color: orange;
+  color: white;
+}
+
+button.number:hover {
+  background-color: darkorange;
+}
+
+/* Scientific function buttons: Green */
+button.scientific {
+  background-color: #2ecc71;
+  color: white;
+}
+
+button.scientific:hover {
+  background-color: #27ae60;
+}
+
+/* Operator buttons: Light Grey */
+button.operator {
+  background-color: #ccc;
+  color: black;
+}
+
+button.operator:hover {
+  background-color: #bbb;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
